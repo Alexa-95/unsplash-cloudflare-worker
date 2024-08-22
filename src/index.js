@@ -52,7 +52,7 @@ const getImages = async request => {
 
 	return new Response(JSON.stringify(images), {
 		headers: {
-			'Content-type': 'application-json',
+			'Content-type': 'application/json',
 			...corsHeaders(allowedOrigin)
 		}
 	})
@@ -67,5 +67,8 @@ export default {
 		if (request.method === "POST") {
 			return getImages(request)
 		}
+		// Redirect any other requests to a different URL, such as
+		// your deployed React application
+		return new Response.redirect("https://unsplash-cloudflare-page.pages.dev/")
 	},
 };
