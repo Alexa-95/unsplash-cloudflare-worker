@@ -9,8 +9,8 @@
  */
 
 const allowedOrigins = [
-	"https://localhost:3000",
-	"https://unsplash-cloudflare-page.pages.dev/"
+	"https://unsplash-cloudflare-page.pages.dev",
+	"https://localhost:3000"
 ]
 const corsHeaders = origin => ({
 	'Access-Control-Allow-Headers': "*",
